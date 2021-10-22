@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title> Dojo Survey</title>
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<!-- YOUR own local CSS -->
+<link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
+       <div class="container">
+         <a class="navbar-brand">Dojo Survey Core Assignment</a>
+       </div>
+   </nav>
+
+   <section class="py-4"></section>
+   <section class="py-4"></section>
+   <section class="py-4">
+   <div class="container text-center">
+   		<h2 class="text-center text-primary">Dojo Survey</h2>
+   		<div class="col-lg-6 offset-lg-3">
+   		<form method="POST" action="/" class="text-start" >
+   		
+	   		<div class="form-group my-2">
+               <label for="name" class="fs-4 form-label">Name:</label>
+               <input type="text" name="name" class="form-control">
+            </div>
+	   		
+	   		<div class="form-group my-2">
+	   			<label for="location" class="fs-4 form-label">Dojo Location:</label>
+	   			<select class="form-select form-control" name="location">
+	   			  <option selected>Please select one option... </option>
+				  <option data-th-each="country : ${countries}" data-th-value="${country}" data-th-text="${country}"></option>
+				</select>
+	   		</div>
+	   		
+	   		<div class="form-group my-2">
+	   			<label for="language" class="fs-4 form-label">Favorite Language:</label>
+	   			<select   class="form-select form-control" name="language">
+	   			  <option selected>Please select one option... </option>
+				  <option data-th-each="lang : ${languages}" data-th-value="${lang}" data-th-text="${lang}"></option>
+				</select>
+	   		</div>
+	   		<div class="form-group my-2">
+                <label for="comment" class="fs-4 form-label">Comments:</label>
+            </div>
+        
+            <div class="form-group my-2">
+                <textarea name="comment" class="col-12 mb-3 col-form-control"></textarea>
+            </div>
+	   		<div class="text-center"><input type="submit" value="Submit" class="btn btn-primary my-2"></div>
+	   </form>
+   		
+   		
+   		</div>
+
+   </div>
+   </section>
+	
+   
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title> Dojo Survey</title>
+<link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css" />
+<!-- YOUR own local CSS -->
+<link rel="stylesheet" href="/css/styles.css"/>
+</head>
+<body>
+   <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-1 fixed-top">
+       <div class="container">
+         <a class="navbar-brand">Dojo Survey Core Assignment</a>
+       </div>
+   </nav>
+
+   <section class="py-4"></section>
+   <section class="py-4"></section>
+   <section class="py-4">
+   <div class="container text-center">
+   		<div class="col-lg-6 offset-lg-3">
+	   		<h2 class="text-center">Submitted Info</h2>
+		   	<table class="table table-stripped table-hover">
+		   	<tbody>
+		   	<tr>
+		   		<td class="fw-bold">Name</td>
+		   		<td data-th-text="${name}"></td>
+		   	</tr>
+		   	<tr>
+		   		<td class="fw-bold">Dojo Location</td>
+		   		<td data-th-text="${location}"></td>
+		   	</tr>
+		   	<tr>
+		   		<td class="fw-bold">Favorite Language</td>
+		   		<td data-th-text="${language}"></td>
+		   	</tr>
+		   	<tr>
+		   		<td class="fw-bold">Comment</td>
+		   		<td data-th-text="${comment}"></td>
+		   	</tr>
+		   	</tbody>
+		   	
+		   	</table>
+		   	
+		   	<div><a href= "/" class="btn btn-primary">Go back</a></div>
+	   </div>
+   </div>
+   </section>
+	
+   
+<script src="/webjars/jquery/jquery.min.js"></script>
+<script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
